@@ -1,6 +1,6 @@
 import { html } from 'htm/preact'
 import { type FunctionComponent, render } from 'preact'
-import { useMemo } from 'preact/hooks'
+import { useComputed } from '@preact/signals'
 import Debug from '@substrate-system/debug'
 import { State } from './state.js'
 import Router, { routes } from './routes/index.js'
@@ -23,17 +23,17 @@ if (isDev()) {
 export const Example:FunctionComponent = function Example () {
     debug('rendering example...', state)
 
-    const match = useMemo(() => {
+    const match = useComputed(() => {
         return router.match(state.route.value)
-    }, [state.route.value])
+    })
 
-    if (!match || !match.action) {
+    if (!match.value || !match.value.action) {
         return html`<div class="404">
             <h1>404</h1>
         </div>`
     }
 
-    const ChildNode = match.action(match, state.route.value)
+    const ChildNode = match.value.action(match.value, state.route.value)
 
     return html`<main>
         <header>
