@@ -27,7 +27,7 @@
     "htm": "^3.1.1",
     "ky": "^1.14.1",
     "preact": "^10.28.0",
-    "route-event": "^7.4.0"
+    "route-event": "^8.0.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
@@ -35,7 +35,7 @@
     "@playwright/test": "^1.57.0",
     "@preact/preset-vite": "^2.10.2",
     "@substrate-system/debug": "^0.9.0",
-    "@substrate-system/tapout": "^0.0.35",
+    "@substrate-system/tapout": "^0.0.37",
     "@substrate-system/tapzero": "^0.10.15",
     "@substrate-system/wait-on": "^8.0.3",
     "@types/node": "^25.0.2",
@@ -48,7 +48,7 @@
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "lightningcss": "^1.30.2",
-    "netlify-cli": "^23.12.3",
+    "netlify-cli": "^24.0.1",
     "stylelint": "^17.0.0",
     "stylelint-config-standard": "^40.0.0",
     "tap-spec": "^5.0.0",
