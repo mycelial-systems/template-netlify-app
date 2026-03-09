@@ -4,48 +4,57 @@ import { browserslistToTargets } from 'lightningcss'
 import preact from '@preact/preset-vite'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-    define: {
-        global: 'globalThis'
-    },
-    plugins: [
-        preact({
-            devtoolsInProd: false,
-            prefreshEnabled: true,
-            babel: {
-                sourceMaps: 'both'
-            }
-        })
-    ],
-    // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803
-    esbuild: {
-        logOverride: { 'this-is-undefined-in-esm': 'silent' }
-    },
-    publicDir: '_public',
-    css: {
-        transformer: 'lightningcss',
-        lightningcss: {
-            targets: browserslistToTargets(browserslist('>= 0.25%')),
+export default defineConfig(({ mode }) => {
+    return {
+        define: {
+            global: 'globalThis'
         },
-    },
-    server: {
-        port: 8888,
-        host: true,
-        open: true,
-        proxy: {
-            '/api': {
-                target: 'http://localhost:9999/.netlify/functions',
-                changeOrigin: true,
-                rewrite: path => path.replace(/^\/api/, ''),
+        resolve: {
+            alias: {
+                '@substrate-system/debug': mode === 'production' ?
+                    '@substrate-system/debug/noop' :
+                    '@substrate-system/debug'
+            }
+        },
+        plugins: [
+            preact({
+                devtoolsInProd: false,
+                prefreshEnabled: true,
+                babel: {
+                    sourceMaps: 'both'
+                }
+            })
+        ],
+        // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803
+        esbuild: {
+            logOverride: { 'this-is-undefined-in-esm': 'silent' }
+        },
+        publicDir: '_public',
+        css: {
+            transformer: 'lightningcss',
+            lightningcss: {
+                targets: browserslistToTargets(browserslist('>= 0.25%')),
             },
         },
-    },
-    build: {
-        cssMinify: 'lightningcss',
-        target: 'esnext',
-        minify: false,
-        outDir: './public',
-        emptyOutDir: true,
-        sourcemap: 'inline'
+        server: {
+            port: 8888,
+            host: true,
+            open: true,
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:9999/.netlify/functions',
+                    changeOrigin: true,
+                    rewrite: path => path.replace(/^\/api/, ''),
+                },
+            },
+        },
+        build: {
+            cssMinify: 'lightningcss',
+            target: 'esnext',
+            minify: mode === 'production',
+            outDir: './public',
+            emptyOutDir: true,
+            sourcemap: 'inline',
+        }
     }
 })
