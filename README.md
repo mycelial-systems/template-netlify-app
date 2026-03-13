@@ -4,8 +4,9 @@ A template for applications using [preact](https://preactjs.com/),
 [htm](https://github.com/developit/htm/tree/master),
 [typescript](https://www.typescriptlang.org/),
 and [netlify](https://www.netlify.com/) as host.
-Use [tape-run](https://github.com/juliangruber/tape-run) for tests in a browser
-environment.
+Use
+[@substrate-system/tapout](https://www.npmjs.com/package/@substrate-system/tapout)
+for tests in a browser environment.
 
 See
 [template-ts-preact-htm-app](https://github.com/nichoth/template-ts-preact-htm-app)
