@@ -38,6 +38,9 @@ Runs ESLint with TypeScript support. Uses Standard style with 4-space
 indentation.
 
 ### Testing
+
+* **Do not write brittle tests**. Do not check for literal text content.
+
 ```bash
 npm test                  # Run unit tests (tapzero)
 npm run build-tests       # Build test bundle only
@@ -89,6 +92,8 @@ State.Increase(state)  // Modify state via static methods
   `router.addRoute(path, action)`
 - Actions return component functions
 - State tracks current route via `state.route` signal
+- Do not ever attach click listeners to `a` tags. Local
+  navigation is handled by the `route-event` dependency.
 
 ### Component Pattern (HTM)
 Uses HTM (JSX-like syntax in template literals) with Preact:
