@@ -5,7 +5,7 @@
   "main": "public/index.js",
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
-    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint": "stylelint \"**/*.css\" --ignore-pattern \"public/**\"",
     "test": "esbuild ./test/index.ts --bundle --keep-names | tapout",
     "test-a11y": "playwright test",
     "test-a11y:ui": "playwright test --ui",
