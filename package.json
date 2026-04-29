@@ -26,12 +26,12 @@
     "@substrate-system/hamburger-two": "^0.0.13",
     "@substrate-system/routes": "^5.0.5",
     "htm": "^3.1.1",
-    "ky": "^2.0.0",
+    "ky": "^2.0.2",
     "preact": "^10.29.1",
-    "route-event": "^8.0.0"
+    "route-event": "^8.1.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.11.1",
+    "@axe-core/playwright": "^4.11.2",
     "@netlify/functions": "^5.2.0",
     "@playwright/test": "^1.59.1",
     "@preact/preset-vite": "^2.10.5",
@@ -40,7 +40,7 @@
     "@substrate-system/tapzero": "^0.10.15",
     "@substrate-system/wait-on": "^8.0.3",
     "@types/node": "^25.6.0",
-    "@typescript-eslint/eslint-plugin": "^8.58.1",
+    "@typescript-eslint/eslint-plugin": "^8.59.1",
     "@typescript-eslint/parser": "^8.8.1",
     "auto-changelog": "^2.4.0",
     "browserslist": "^4.28.2",
@@ -49,12 +49,12 @@
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "lightningcss": "^1.32.0",
-    "netlify-cli": "^24.11.1",
-    "stylelint": "^17.7.0",
+    "netlify-cli": "^26.0.0",
+    "stylelint": "^17.9.1",
     "stylelint-config-standard": "^40.0.0",
     "tap-spec": "^5.0.0",
-    "typescript": "^6.0.2",
-    "vite": "^8.0.8"
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)"
 }
