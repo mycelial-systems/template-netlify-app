@@ -39,22 +39,22 @@
     "@substrate-system/tapout": "^0.0.37",
     "@substrate-system/tapzero": "^0.10.15",
     "@substrate-system/wait-on": "^8.0.3",
-    "@types/node": "^25.6.0",
-    "@typescript-eslint/eslint-plugin": "^8.59.1",
+    "@types/node": "^25.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
     "@typescript-eslint/parser": "^8.8.1",
-    "auto-changelog": "^2.4.0",
+    "auto-changelog": "^2.5.1",
     "browserslist": "^4.28.2",
     "concurrently": "^9.0.1",
     "esbuild": "^0.28.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "lightningcss": "^1.32.0",
-    "netlify-cli": "^26.0.0",
-    "stylelint": "^17.10.0",
+    "netlify-cli": "^26.0.1",
+    "stylelint": "^17.11.0",
     "stylelint-config-standard": "^40.0.0",
     "tap-spec": "^5.0.0",
     "typescript": "^6.0.3",
-    "vite": "^8.0.10"
+    "vite": "^8.0.12"
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)"
 }
